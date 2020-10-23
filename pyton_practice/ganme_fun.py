@@ -14,7 +14,7 @@ def fight(my_hp,my_power,enemy_hp, enemy_power):
     # 打印敌人的血量和攻击力
     # print(f"敌人的血量为{enemy_hp}，攻击力为{enemy_power}")
 
-    # 加入循环，让游戏可以进行多轮
+    # 加入循环，让游戏可以进行多轮#天
     while True:
         my_hp = my_hp - enemy_power
         enemy_hp = enemy_hp - my_power
