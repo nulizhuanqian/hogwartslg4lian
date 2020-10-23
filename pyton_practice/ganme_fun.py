@@ -6,13 +6,13 @@
 import random
 
 
-def fight(enemy_hp, enemy_power):
+def fight(my_hp,my_power,enemy_hp, enemy_power):
     # 定义4个变量存放数据
-    my_hp = 1000
-    my_power = 200
+    # my_hp = 1000
+    # my_power = 200
 
     # 打印敌人的血量和攻击力
-    print(f"敌人的血量为{enemy_hp}，攻击力为{enemy_power}")
+    # print(f"敌人的血量为{enemy_hp}，攻击力为{enemy_power}")
 
     # 加入循环，让游戏可以进行多轮
     while True:
@@ -32,8 +32,9 @@ def fight(enemy_hp, enemy_power):
             print(f"敌人的剩余血量为{enemy_hp}")
             print("我赢了")
             break
-
+#作为包导入时不执行if __name__ == "__main__"里的代码
 if __name__ == "__main__":
+
     # 利用列表推导式生成hp
     hp = [x for x in range(990, 1010)]
     # print(hp)
@@ -41,11 +42,14 @@ if __name__ == "__main__":
     # 让敌人的hp从hp列表中随机挑选一个值
     # 自动导包：alt+回车
     enemy_hp = random.choice(hp)
+    my_hp = random.choice(hp)
     # print(enemy_hp)
 
     # 敌人的攻击力用randint方法生成随机整数
     enemy_power = random.randint(190, 210)
+    my_power = random.randint(100,200)
+
     # print(enemy_power)
 
     # 调用函数，传入敌人的hp和power
-    fight(enemy_hp, enemy_power)
+    fight(my_hp,my_power,enemy_hp, enemy_power)
